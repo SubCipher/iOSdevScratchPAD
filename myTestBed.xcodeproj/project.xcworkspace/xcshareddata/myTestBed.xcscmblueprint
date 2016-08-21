@@ -7,14 +7,14 @@
     "72B3015EC1AA99781013F72014CD7BBFE7AF69C3" : 0,
     "B0ADF7A69BC554547BEAA5666F78E236B5A35DB7" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2C7F13F8-7479-4318-99D1-4C6B2CA2F63D",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E9DC2DC3-5D13-4043-A64B-CB11691692E4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "72B3015EC1AA99781013F72014CD7BBFE7AF69C3" : "objective-c\/",
     "B0ADF7A69BC554547BEAA5666F78E236B5A35DB7" : ""
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "TestBed",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "myTestBed",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "objC\/TestBed\/TestBed.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "objC\/myTestBed\/myTestBed.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:SubCipher\/objective-c.git",
