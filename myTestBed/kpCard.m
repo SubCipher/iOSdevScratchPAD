@@ -18,12 +18,29 @@
     return _contents;
 }
 
+-(int)match:(NSArray *)otherCards{
+    
+    int score = 0;
+    
+    //for each card object in array check for matching string
+    for(kpCard *card in otherCards){
+        
+    //card arrayobjectcontents isEqualToString:singleObjectContents(self)
+        if([card.contents isEqualToString:self.contents]){
+            
+        }     }
+    
+    
+    return score;
+}
+
+
 -(void)compareContent:(NSString *)compareThisContent{
     
     int ans = [self.contents isEqual:compareThisContent];
     if(ans > 0){
         _matched = ans;
-        NSLog(@"%@ matche`s %@ [%d]",self.contents,compareThisContent,_matched);
+        NSLog(@"%@ matches %@ [%d]",self.contents,compareThisContent,_matched);
     }else{
         _matched = ans;
         NSLog(@" %@ does not match %@ [%d]",self.contents,compareThisContent,_matched);
