@@ -11,5 +11,11 @@
 
 @interface kpDeck : NSObject
 
+-(void)addCard:(kpCard *)card atTop:(BOOL)atTop;
+-(void)addCard:(kpCard *)card;
+
+-(kpCard *)drawRandomCard;
+
+
 
 @end

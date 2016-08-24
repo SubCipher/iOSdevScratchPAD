@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18237FC11D6BA58800241541 /* kpDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 18237FC01D6BA58800241541 /* kpDeck.m */; };
+		18237FC41D6CBC4A00241541 /* kpPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 18237FC31D6CBC4A00241541 /* kpPlayingCard.m */; };
+		18237FCA1D6D03C800241541 /* kpPlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 18237FC91D6D03C800241541 /* kpPlayingCardDeck.m */; };
 		1852B43B1D68B0C900006FB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852B43A1D68B0C900006FB0 /* main.m */; };
 		1852B4431D68B0DC00006FB0 /* kpCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852B4421D68B0DC00006FB0 /* kpCard.m */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,10 @@
 /* Begin PBXFileReference section */
 		18237FBF1D6BA58800241541 /* kpDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kpDeck.h; sourceTree = "<group>"; };
 		18237FC01D6BA58800241541 /* kpDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kpDeck.m; sourceTree = "<group>"; };
+		18237FC21D6CBC4A00241541 /* kpPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kpPlayingCard.h; sourceTree = "<group>"; };
+		18237FC31D6CBC4A00241541 /* kpPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kpPlayingCard.m; sourceTree = "<group>"; };
+		18237FC81D6D03C800241541 /* kpPlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kpPlayingCardDeck.h; sourceTree = "<group>"; };
+		18237FC91D6D03C800241541 /* kpPlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kpPlayingCardDeck.m; sourceTree = "<group>"; };
 		1852B4371D68B0C900006FB0 /* myTestBed */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = myTestBed; sourceTree = BUILT_PRODUCTS_DIR; };
 		1852B43A1D68B0C900006FB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1852B4411D68B0DC00006FB0 /* kpCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kpCard.h; sourceTree = "<group>"; };
@@ -44,6 +50,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18237FCB1D6D23BC00241541 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1852B4411D68B0DC00006FB0 /* kpCard.h */,
+				1852B4421D68B0DC00006FB0 /* kpCard.m */,
+				18237FC21D6CBC4A00241541 /* kpPlayingCard.h */,
+				18237FC31D6CBC4A00241541 /* kpPlayingCard.m */,
+				18237FBF1D6BA58800241541 /* kpDeck.h */,
+				18237FC01D6BA58800241541 /* kpDeck.m */,
+				18237FC81D6D03C800241541 /* kpPlayingCardDeck.h */,
+				18237FC91D6D03C800241541 /* kpPlayingCardDeck.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		1852B42E1D68B0C900006FB0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1852B43A1D68B0C900006FB0 /* main.m */,
-				1852B4411D68B0DC00006FB0 /* kpCard.h */,
-				1852B4421D68B0DC00006FB0 /* kpCard.m */,
-				18237FBF1D6BA58800241541 /* kpDeck.h */,
-				18237FC01D6BA58800241541 /* kpDeck.m */,
+				18237FCB1D6D23BC00241541 /* model */,
 			);
 			path = myTestBed;
 			sourceTree = "<group>";
@@ -128,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18237FCA1D6D03C800241541 /* kpPlayingCardDeck.m in Sources */,
 				1852B4431D68B0DC00006FB0 /* kpCard.m in Sources */,
 				1852B43B1D68B0C900006FB0 /* main.m in Sources */,
 				18237FC11D6BA58800241541 /* kpDeck.m in Sources */,
+				18237FC41D6CBC4A00241541 /* kpPlayingCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
