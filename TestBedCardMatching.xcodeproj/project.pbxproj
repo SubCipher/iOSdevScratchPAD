@@ -536,6 +536,7 @@
 				182380071D6D250C00241541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		182380081D6D250C00241541 /* Build configuration list for PBXNativeTarget "TestBedCardMatchingTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +545,7 @@
 				1823800A1D6D250C00241541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1823800B1D6D250C00241541 /* Build configuration list for PBXNativeTarget "TestBedCardMatchingUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +554,7 @@
 				1823800D1D6D250C00241541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

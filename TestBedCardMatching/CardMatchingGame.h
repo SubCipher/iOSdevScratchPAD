@@ -13,6 +13,8 @@
 @interface CardMatchingGame : NSObject
 
 -(instancetype)initWithCardCount:(NSUInteger)count usingDeck:(kpDeck *)deck;
+
+
 -(void)chooseCardAtIndex:(NSUInteger)index;
 -(kpCard *)cardAtIndex: (NSUInteger)index;
 
