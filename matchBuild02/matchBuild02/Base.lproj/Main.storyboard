@@ -17,51 +17,246 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rre-mG-Okd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="20" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZw-h3-q8d"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PT-tv-kbw">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="559" width="42" height="21"/>
+                                    <rect key="frame" x="28" y="559" width="118" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rre-mG-Okd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6D-yH-Cff">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="A♦️" backgroundImage="cardFront"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="246" width="80" height="107"/>
+                                    <rect key="frame" x="111" y="19" width="80" height="107"/>
                                 </variation>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="149-Od-DXS"/>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kf2-rp-tCE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MN-ve-PJV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="202" y="19" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3r-xs-d1k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-mx-wgk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="292" y="20" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGZ-Z6-hGk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNw-Ab-feD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="148" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oic-XY-1jI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-ek-r1k">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="147" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STc-Bv-7OR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zt-hS-9Zd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="202" y="147" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmK-Qg-OCo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSq-uj-279">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="292" y="147" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Gz-65-vVo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp5-g3-wOW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="273" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zj7-wj-njN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-ee-DwO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="272" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ui-BC-fap"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlh-2U-JjR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="202" y="272" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJU-NL-ro0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D16-XJ-D2x">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="292" y="272" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nye-Fu-26X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KW0-At-os8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="396" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIn-Kh-jvb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzC-Ey-WVv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="395" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLj-yM-2Hd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sli-Qv-x1K">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="202" y="395" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtz-AX-4Np"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkJ-nw-qec">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="292" y="395" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ftb-Ch-UmP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.34560767878238913" green="0.72608901515151514" blue="0.27942766671089037" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="4PT-tv-kbw"/>
                                 <exclude reference="rre-mG-Okd"/>
+                                <exclude reference="4PT-tv-kbw"/>
+                                <exclude reference="w6D-yH-Cff"/>
+                                <exclude reference="4MN-ve-PJV"/>
+                                <exclude reference="J9h-mx-wgk"/>
+                                <exclude reference="yNw-Ab-feD"/>
+                                <exclude reference="jSn-ek-r1k"/>
+                                <exclude reference="4Zt-hS-9Zd"/>
+                                <exclude reference="dSq-uj-279"/>
+                                <exclude reference="wp5-g3-wOW"/>
+                                <exclude reference="Vic-ee-DwO"/>
+                                <exclude reference="Hlh-2U-JjR"/>
+                                <exclude reference="D16-XJ-D2x"/>
+                                <exclude reference="KW0-At-os8"/>
+                                <exclude reference="KzC-Ey-WVv"/>
+                                <exclude reference="sli-Qv-x1K"/>
+                                <exclude reference="nkJ-nw-qec"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="4PT-tv-kbw"/>
                                 <include reference="rre-mG-Okd"/>
+                                <include reference="4PT-tv-kbw"/>
+                                <include reference="w6D-yH-Cff"/>
+                                <include reference="4MN-ve-PJV"/>
+                                <include reference="J9h-mx-wgk"/>
+                                <include reference="yNw-Ab-feD"/>
+                                <include reference="jSn-ek-r1k"/>
+                                <include reference="4Zt-hS-9Zd"/>
+                                <include reference="dSq-uj-279"/>
+                                <include reference="wp5-g3-wOW"/>
+                                <include reference="Vic-ee-DwO"/>
+                                <include reference="Hlh-2U-JjR"/>
+                                <include reference="D16-XJ-D2x"/>
+                                <include reference="KW0-At-os8"/>
+                                <include reference="KzC-Ey-WVv"/>
+                                <include reference="sli-Qv-x1K"/>
+                                <include reference="nkJ-nw-qec"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="touchCardFlipLabel" destination="4PT-tv-kbw" id="qAK-As-wC4"/>
+                        <outlet property="flipLabelText" destination="4PT-tv-kbw" id="ibX-l9-Jsl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193.5" y="359"/>
+            <point key="canvasLocation" x="211.5" y="351"/>
         </scene>
     </scenes>
     <resources>
-        <image name="cardFront" width="128" height="192"/>
+        <image name="subzeroCardBack" width="559" height="864"/>
     </resources>
 </document>
