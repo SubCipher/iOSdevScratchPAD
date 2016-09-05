@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -28,15 +28,6 @@
                                     <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZw-h3-q8d"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PT-tv-kbw">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="559" width="118" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6D-yH-Cff">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -112,17 +103,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Gz-65-vVo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp5-g3-wOW">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" backgroundImage="subzeroCardBack"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="273" width="80" height="107"/>
-                                </variation>
-                                <connections>
-                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zj7-wj-njN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-ee-DwO">
@@ -202,12 +182,31 @@
                                     <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ftb-Ch-UmP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp5-g3-wOW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="subzeroCardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="272" width="80" height="107"/>
+                                </variation>
+                                <connections>
+                                    <action selector="flipTouchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zj7-wj-njN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLc-yG-8Nh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="559" width="125" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.34560767878238913" green="0.72608901515151514" blue="0.27942766671089037" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="rre-mG-Okd"/>
-                                <exclude reference="4PT-tv-kbw"/>
                                 <exclude reference="w6D-yH-Cff"/>
                                 <exclude reference="4MN-ve-PJV"/>
                                 <exclude reference="J9h-mx-wgk"/>
@@ -215,7 +214,6 @@
                                 <exclude reference="jSn-ek-r1k"/>
                                 <exclude reference="4Zt-hS-9Zd"/>
                                 <exclude reference="dSq-uj-279"/>
-                                <exclude reference="wp5-g3-wOW"/>
                                 <exclude reference="Vic-ee-DwO"/>
                                 <exclude reference="Hlh-2U-JjR"/>
                                 <exclude reference="D16-XJ-D2x"/>
@@ -223,12 +221,13 @@
                                 <exclude reference="KzC-Ey-WVv"/>
                                 <exclude reference="sli-Qv-x1K"/>
                                 <exclude reference="nkJ-nw-qec"/>
+                                <exclude reference="wp5-g3-wOW"/>
+                                <exclude reference="RLc-yG-8Nh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="rre-mG-Okd"/>
-                                <include reference="4PT-tv-kbw"/>
                                 <include reference="w6D-yH-Cff"/>
                                 <include reference="4MN-ve-PJV"/>
                                 <include reference="J9h-mx-wgk"/>
@@ -236,7 +235,6 @@
                                 <include reference="jSn-ek-r1k"/>
                                 <include reference="4Zt-hS-9Zd"/>
                                 <include reference="dSq-uj-279"/>
-                                <include reference="wp5-g3-wOW"/>
                                 <include reference="Vic-ee-DwO"/>
                                 <include reference="Hlh-2U-JjR"/>
                                 <include reference="D16-XJ-D2x"/>
@@ -244,11 +242,29 @@
                                 <include reference="KzC-Ey-WVv"/>
                                 <include reference="sli-Qv-x1K"/>
                                 <include reference="nkJ-nw-qec"/>
+                                <include reference="wp5-g3-wOW"/>
+                                <include reference="RLc-yG-8Nh"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="flipLabelText" destination="4PT-tv-kbw" id="ibX-l9-Jsl"/>
+                        <outlet property="scoreLabel" destination="RLc-yG-8Nh" id="ZxF-eI-7pt"/>
+                        <outletCollection property="cardButtons" destination="rre-mG-Okd" id="y3m-t7-HaS"/>
+                        <outletCollection property="cardButtons" destination="w6D-yH-Cff" id="vjj-df-XU3"/>
+                        <outletCollection property="cardButtons" destination="4MN-ve-PJV" id="mau-2i-iTe"/>
+                        <outletCollection property="cardButtons" destination="J9h-mx-wgk" id="wfu-hE-htW"/>
+                        <outletCollection property="cardButtons" destination="yNw-Ab-feD" id="5r7-Ht-Wes"/>
+                        <outletCollection property="cardButtons" destination="jSn-ek-r1k" id="yVZ-lC-1mQ"/>
+                        <outletCollection property="cardButtons" destination="4Zt-hS-9Zd" id="hzW-GE-3bO"/>
+                        <outletCollection property="cardButtons" destination="dSq-uj-279" id="ZEE-w6-WK4"/>
+                        <outletCollection property="cardButtons" destination="wp5-g3-wOW" id="dTM-or-WYg"/>
+                        <outletCollection property="cardButtons" destination="Vic-ee-DwO" id="LrZ-Y4-RDg"/>
+                        <outletCollection property="cardButtons" destination="Hlh-2U-JjR" id="pfv-2O-5Ty"/>
+                        <outletCollection property="cardButtons" destination="D16-XJ-D2x" id="CmV-tT-OnE"/>
+                        <outletCollection property="cardButtons" destination="KW0-At-os8" id="UfM-7g-ImB"/>
+                        <outletCollection property="cardButtons" destination="KzC-Ey-WVv" id="nQT-bG-yay"/>
+                        <outletCollection property="cardButtons" destination="sli-Qv-x1K" id="XJL-oe-u4G"/>
+                        <outletCollection property="cardButtons" destination="nkJ-nw-qec" id="mVd-hn-vgA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

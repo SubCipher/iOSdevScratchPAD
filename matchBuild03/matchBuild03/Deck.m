@@ -1,8 +1,8 @@
 //
 //  Deck.m
-//  matchBuild02
+//  matchBuild03
 //
-//  Created by MacMan on 8/29/16.
+//  Created by MacMan on 9/3/16.
 //  Copyright © 2016 StepWiseDesigns. All rights reserved.
 //
 
@@ -10,9 +10,10 @@
 
 @interface Deck()
 
-@property (strong,nonatomic)NSMutableArray *deck;
+@property(nonatomic,strong)NSMutableArray *deck;
 
 @end
+
 
 
 @implementation Deck
@@ -22,7 +23,9 @@
     return _deck;
 }
 
+
 -(void)addCard:(Card *)card atTop:(BOOL)atTop{
+    
     if(atTop){
         [self.deck insertObject:card atIndex:0];
     }
@@ -38,15 +41,18 @@
 
 
 -(Card *)drawRandomCard{
+    
     Card *randomCard = nil;
     
     if([self.deck count]){
-    unsigned index = arc4random() % [self.deck count];
-    randomCard = self.deck[index];
-    [self.deck removeObjectAtIndex:index];
+        int index = arc4random() % [self.deck count];
+        randomCard = self.deck[index];
+        [self.deck removeObjectAtIndex:index];
+        
     }
+    
+    
     return randomCard;
 }
-
 
 @end
