@@ -10,16 +10,13 @@
 #import "CardMatchingGame.h"
 
 #import "PlayingCardDeck.h"
-#import "PlayingCard.h"
+//#import "PlayingCard.h"
 
 
 @interface CardMatchViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *touchCardButtons;
 @property(strong,nonatomic)CardMatchingGame *game;
-
-
-
 @property(nonatomic) int score;
 
 
