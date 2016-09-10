@@ -52,8 +52,8 @@ static const int MISMATCH_PENALTY = 2;
 static const int COST_TO_CHOOSE = 1;
 
 -(void)choseCardAtIndex:(NSUInteger)index{
-    Card *card = [self cardAtIndex:index];
     
+    Card *card = [self cardAtIndex:index];
     if(!card.isMatched){
         if(card.isChosen){
             card.chosen = NO;

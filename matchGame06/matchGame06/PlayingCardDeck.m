@@ -1,33 +1,32 @@
 //
 //  PlayingCardDeck.m
-//  matchBuild05
+//  matchGame06
 //
-//  Created by MacMan on 9/7/16.
+//  Created by MacMan on 9/9/16.
 //  Copyright © 2016 StepWiseDesigns. All rights reserved.
 //
 
 #import "PlayingCardDeck.h"
 #import "PlayingCard.h"
-
 @implementation PlayingCardDeck
 
-
-
--(instancetype) init{
+-(instancetype)init{
     
     self = [super init];
-    if(self){
+    
+    if(self) {
+        //;
         
         for(NSString *suit in [PlayingCard validSuits]){
-            for(NSInteger rank = 1; rank <= [PlayingCard maxRank]; rank++){
+            for(NSInteger rank = 1; rank < [PlayingCard maxRank]; rank++){
                 PlayingCard *card = [[PlayingCard alloc]init];
-                    card.rank = rank;
-                    card.suit = suit;
-                    [self addCard:card];
+                card.rank = rank;
+                card.suit = suit;
+                [self addCard:card];
+                
             }
         }
-    }
-    
-    return self;
+    }return self;
 }
+
 @end

@@ -14,6 +14,7 @@
 
 -(int)match:(NSArray *)otherCards{
     int score =0;
+    
     if([otherCards count] ==1){
         PlayingCard *otherCard = [otherCards firstObject];
         if(otherCard.rank == self.rank){
@@ -22,6 +23,13 @@
             score =1;
         }
     }return score;
+}
+
+
+-(NSString *)contents{
+    
+    NSArray *rankStrings = [PlayingCard rankStrings];
+    return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
 
 
@@ -42,7 +50,7 @@
 
 +(NSUInteger)maxRank{
     
-    return [self.rankStrings count] -1;
+    return [[self rankStrings] count] -1;
 }
 
 -(void)setSuit:(NSString *)suit{
@@ -53,12 +61,6 @@
 
 -(NSString *)suit{
     return _suit ? _suit : @"?";
-}
-
--(NSString *)contents{
-    NSArray *rankStrings = [PlayingCard rankStrings];
-    return [rankStrings[self.rank] stringByAppendingString:self.suit];
-    
 }
 
 @end

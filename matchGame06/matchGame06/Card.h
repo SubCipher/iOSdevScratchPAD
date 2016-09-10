@@ -1,8 +1,8 @@
 //
 //  Card.h
-//  matchBuild05
+//  matchGame06
 //
-//  Created by MacMan on 9/7/16.
+//  Created by MacMan on 9/9/16.
 //  Copyright © 2016 StepWiseDesigns. All rights reserved.
 //
 
@@ -11,10 +11,10 @@
 @interface Card : NSObject
 
 @property(strong,nonatomic)NSString *contents;
-
+@property(nonatomic,getter=isChosen)BOOL *chosen;
 @property(nonatomic,getter=isMatched)BOOL matched;
-@property(nonatomic,getter=isChosen)BOOL chosen;
 
 -(int)match:(NSArray *)otherCards;
+
 
 @end

@@ -14,6 +14,7 @@
 
 -(int)match:(NSArray *)otherCards{
     int score = 0;
+    
     if([otherCards count] ==1){
         PlayingCard *otherCard = [otherCards firstObject];
         if(otherCard.rank == self.rank){
@@ -37,7 +38,7 @@
 }
 
 +(NSArray *)rankStrings{
-    return @[@"?",@"A",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
+    return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
     
 }
 

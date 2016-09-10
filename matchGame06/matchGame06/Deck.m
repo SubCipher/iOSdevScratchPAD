@@ -1,8 +1,8 @@
 //
 //  Deck.m
-//  matchBuild05
+//  matchGame06
 //
-//  Created by MacMan on 9/7/16.
+//  Created by MacMan on 9/9/16.
 //  Copyright © 2016 StepWiseDesigns. All rights reserved.
 //
 
@@ -15,17 +15,15 @@
 @end
 
 
-
 @implementation Deck
 
 -(NSMutableArray *)deck{
     if(!_deck) _deck = [[NSMutableArray alloc]init];
     return _deck;
-    
 }
 
+
 -(void)addCard:(Card *)card atTop:(BOOL)atTop{
-    
     if(atTop){
         [self.deck insertObject:card atIndex:0];
     }else{
@@ -33,23 +31,20 @@
     }
 }
 
-
 -(void)addCard:(Card *)card{
     [self addCard:card atTop:NO];
 }
-
 
 -(Card *)drawRandomCard{
     Card *randomCard = nil;
     
     if([self.deck count]){
-        
-        unsigned index = arc4random() % [self.deck count];
+        unsigned index = arc4random() % [[self deck]count];
         randomCard = self.deck[index];
+        
         [self.deck removeObjectAtIndex:index];
-   
-        }
-    return randomCard;
     }
+    return randomCard;
+}
 
 @end
