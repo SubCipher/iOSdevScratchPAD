@@ -7,31 +7,48 @@
 //
 
 #import "CardMatchViewController.h"
+#import "PlayingCardDeck.h"
 
 @interface CardMatchViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *flipCountLabel;
+@property(strong,nonatomic)Deck *cardDeck;
+@property(nonatomic)int flipCounter;
 
 @end
 
 @implementation CardMatchViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+-(Deck *)cardDeck{
+    if(!_cardDeck) _cardDeck = [self createDeck];
+    return _cardDeck;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(Deck *)createDeck{
+    return [[PlayingCardDeck alloc]init];
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)setFlipCounter:(int)flipCounter{
+    _flipCounter = flipCounter;
+    self.flipCountLabel.text = [NSString stringWithFormat:@"Flip Count: %d",self.flipCounter];
 }
-*/
+
+- (IBAction)flipCardButton:(UIButton *)sender {
+    
+    if([sender.currentTitle length]){
+    [sender setBackgroundImage:[UIImage imageNamed:@"subzeroCardBack"] forState:UIControlStateNormal];
+    [sender setTitle:@"" forState:UIControlStateNormal];
+        self.flipCounter++;
+    }else{
+        
+        Card *randomCard = [self.cardDeck drawRandomCard];
+        if(randomCard){
+        [sender setBackgroundImage:[UIImage imageNamed:@"cardFront"] forState:UIControlStateNormal];
+        [sender setTitle:randomCard.contents forState:UIControlStateNormal];
+       
+        }
+    } self.flipCounter++;
+}
 
 @end
