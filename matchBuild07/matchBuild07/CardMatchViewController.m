@@ -1,8 +1,8 @@
 //
 //  CardMatchViewController.m
-//  matchGame06
+//  matchBuild07
 //
-//  Created by MacMan on 9/9/16.
+//  Created by MacMan on 9/11/16.
 //  Copyright © 2016 StepWiseDesigns. All rights reserved.
 //
 
@@ -11,42 +11,47 @@
 #import "CardMatchingGame.h"
 
 @interface CardMatchViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *flipCountLabel;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *touchCardButtons;
-@property (strong,nonatomic)Deck *deck;
-
 @property(strong,nonatomic)CardMatchingGame *game;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *touchCardButtons;
+@property (weak, nonatomic) IBOutlet UILabel *matchScoreLabel;
+
+
 @end
 
 @implementation CardMatchViewController
 
--(CardMatchingGame *)game{
-    if(!_game) _game = [[CardMatchingGame alloc]initWithCardCount:[self.touchCardButtons count] usingDeck:[self createDeck]];
-    return _game;
-                        
-}
 
 -(Deck *)createDeck{
     return [[PlayingCardDeck alloc]init];
-
 }
 
-- (IBAction)flipCardButton:(UIButton *)sender {
+
+
+-(CardMatchingGame *)game{
+    if(!_game) _game = [[CardMatchingGame alloc]initWithCardCount:[self.touchCardButtons count] usingDeck:[self createDeck]];
+    return _game;
+}
+
+
+
+- (IBAction)touchCardButton:(UIButton *)sender {
+    
     NSInteger chosenButtonIndex = [self.touchCardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:chosenButtonIndex];
     [self updateUI];
-    
-    
+  
+
 }
 
 -(void)updateUI{
     for(UIButton *cardButton in self.touchCardButtons){
         NSInteger cardButtonIndex = [self.touchCardButtons indexOfObject:cardButton];
-        
-        Card *card = [self.game cardAtIndex:cardButtonIndex];
+        Card *card= [self.game cardAtIndex:cardButtonIndex];
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
-        [cardButton setBackgroundImage: [self backgroundImageForCard:card] forState:UIControlStateNormal];
-        cardButton.enabled =!card.isMatched;}
+        [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
+        cardButton.enabled =!card.isMatched;
+        self.matchScoreLabel.text = [NSString stringWithFormat:@"Match Score: %ld",(long)self.game.score];
+    }
 }
 
 -(NSString *)titleForCard:(Card *)card{
@@ -55,6 +60,16 @@
 
 -(UIImage *)backgroundImageForCard:(Card *)card{
     return [UIImage imageNamed:card.isChosen ? @"cardFront" : @"subzeroCardBack"];
-    
 }
+
+
 @end
+
+
+
+
+
+
+
+
+

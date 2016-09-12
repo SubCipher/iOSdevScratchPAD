@@ -341,6 +341,31 @@
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="0LY-HF-rPy" id="qFc-GM-ypx"/>
+                        <outletCollection property="touchCardButtons" destination="pLh-MV-wmb" id="NsF-1N-5ye"/>
+                        <outletCollection property="touchCardButtons" destination="7ZW-fr-gbu" id="neD-RN-Rq5"/>
+                        <outletCollection property="touchCardButtons" destination="zea-gL-vMQ" id="geh-UM-OpL"/>
+                        <outletCollection property="touchCardButtons" destination="j78-EU-8Cl" id="TEZ-gF-8KL"/>
+                        <outletCollection property="touchCardButtons" destination="6Eg-Ky-eQt" id="d5K-kX-eAu"/>
+                        <outletCollection property="touchCardButtons" destination="t9Q-uL-HPI" id="gR1-VN-v9M"/>
+                        <outletCollection property="touchCardButtons" destination="cgX-kh-Zye" id="rjq-Er-Onv"/>
+                        <outletCollection property="touchCardButtons" destination="QC4-kf-R5k" id="sgs-QH-ib1"/>
+                        <outletCollection property="touchCardButtons" destination="9cU-3j-3F7" id="50H-0f-7ff"/>
+                        <outletCollection property="touchCardButtons" destination="xbb-1d-7cc" id="wkv-NQ-eWd"/>
+                        <outletCollection property="touchCardButtons" destination="pmO-F6-pb5" id="qEs-Zs-BOK"/>
+                        <outletCollection property="touchCardButtons" destination="lsQ-hK-tsF" id="rsn-55-b58"/>
+                        <outletCollection property="touchCardButtons" destination="U6H-Mh-9nr" id="Ba1-6R-2AC"/>
+                        <outletCollection property="touchCardButtons" destination="1pK-m4-XeW" id="sJ3-mW-8S8"/>
+                        <outletCollection property="touchCardButtons" destination="1ke-6N-ObZ" id="1bZ-BS-uRt"/>
+                        <outletCollection property="touchCardButtons" destination="HJo-87-J79" id="it5-AZ-PMF"/>
+                        <outletCollection property="touchCardButtons" destination="oPi-SX-DuS" id="YD7-Dv-gvz"/>
+                        <outletCollection property="touchCardButtons" destination="NrV-c0-iXt" id="XQl-FO-vlA"/>
+                        <outletCollection property="touchCardButtons" destination="2ev-Ib-wvD" id="jjl-Mk-DpF"/>
+                        <outletCollection property="touchCardButtons" destination="JdR-vk-6x5" id="k8X-Co-v3L"/>
+                        <outletCollection property="touchCardButtons" destination="EJ6-6l-4t0" id="toi-ZD-k27"/>
+                        <outletCollection property="touchCardButtons" destination="Boc-ZI-Iux" id="NGt-Lw-cDU"/>
+                        <outletCollection property="touchCardButtons" destination="1uK-Q9-ZPe" id="zx9-NK-N2f"/>
+                        <outletCollection property="touchCardButtons" destination="1bj-XN-S61" id="nRg-LG-Jrt"/>
+                        <outletCollection property="touchCardButtons" destination="rOg-mU-yiE" id="fjy-Xe-29G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
