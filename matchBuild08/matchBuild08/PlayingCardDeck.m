@@ -18,15 +18,12 @@
         
         for(NSString *suit in[PlayingCard validSuits]){
             for(NSUInteger rank = 1; rank <= [PlayingCard maxRank];rank++){
+                
                 PlayingCard *card = [[PlayingCard alloc]init];
-                //if(card){
                     card.rank = rank;
                     card.suit = suit;
                     [self addCard:card];
-//                }else{
-//                    self = nil;
-//                    break;
-//                }
+
             }
         }
         

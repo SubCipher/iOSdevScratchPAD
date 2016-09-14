@@ -1,8 +1,8 @@
 //
 //  CardMatchingGame.h
-//  matchBuild09
+//  matchBuild10
 //
-//  Created by MacMan on 9/12/16.
+//  Created by MacMan on 9/13/16.
 //  Copyright © 2016 StepWiseDesigns. All rights reserved.
 //
 
@@ -15,8 +15,11 @@
 
 -(instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck;
 
+
+
 -(void)chooseCardAtIndex:(NSUInteger)index;
 -(Card *)cardAtIndex:(NSUInteger)index;
 
 @property (nonatomic,readonly)NSInteger score;
+
 @end

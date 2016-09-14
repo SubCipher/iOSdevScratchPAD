@@ -12,7 +12,6 @@
 
 @interface CardMatchViewController ()
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *touchCardButtons;
-
 @property (strong,nonatomic)CardMatchingGame *game;
 
 @end
@@ -31,17 +30,21 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     NSUInteger chosenButtonIndex = [self.touchCardButtons indexOfObject:sender];
+    
     [self.game chooseCardAtIndex:chosenButtonIndex];
     [self updateUI];
     }
 
 -(void)updateUI{
     for(UIButton *cardButton in self.touchCardButtons){
+        
         NSInteger cardButtonIndex = [self.touchCardButtons indexOfObject: cardButton];
+        
         Card *card = [self.game cardAtIndex:cardButtonIndex];
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
-        cardButton.enabled =!card.isMatched;
+        cardButton.enabled = !card.isMatched;
         
         NSLog(@"%@",self.touchCardButtons[cardButtonIndex]);
     }
@@ -49,7 +52,7 @@
 
 
 -(NSString *)titleForCard:(Card *)card{
-    return card.isChosen ?card.contents : @"";
+    return card.isChosen ? card.contents : @"";
 }
 
 -(UIImage *)backgroundImageForCard:(Card *)card{

@@ -1,8 +1,8 @@
 //
 //  CardMatchingGame.m
-//  matchBuild08
+//  matchBuild10
 //
-//  Created by MacMan on 9/12/16.
+//  Created by MacMan on 9/13/16.
 //  Copyright © 2016 StepWiseDesigns. All rights reserved.
 //
 
@@ -10,17 +10,14 @@
 
 @interface CardMatchingGame()
 
-@property(nonatomic,readwrite)NSInteger score;
-@property(strong,nonatomic)NSMutableArray *cards;
+@property (nonatomic,readwrite)NSInteger score;
+@property (strong,nonatomic)NSMutableArray *cards;
 
 @end
 
 @implementation CardMatchingGame
 
--(NSMutableArray *)cards{
-    if(!_cards) _cards = [[NSMutableArray alloc]init];
-    return _cards;
-}
+
 
 -(instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck{
     self = [super init];
@@ -28,64 +25,60 @@
     if(self){
         
         for(int i = 0; i < count; i++){
-            Card *card = [deck drawRandomCard];
+            Card *card = [deck drawRandomeCard];
             if(card){
-                [self.cards addObject:card];
+            [self.cards addObject:card];
             }else{
                 self = nil;
                 break;
+                }
             }
-        }
-    }return self;
+    }return  self;
 }
 
-
+-(NSMutableArray *)cards{
+    if(!_cards) _cards = [[NSMutableArray alloc]init];
+    return _cards;
+}
 
 -(Card *)cardAtIndex:(NSUInteger)index{
-    return (index < [self.cards count]) ? self.cards[index] : nil;
-
+    return (index < [self.cards count]) ? self.cards[index] :nil;
+    
 }
 
 static const int MATCH_BONUS = 4;
 static const int MISMATCH_PENALTY = 2;
 static const int COST_TO_CHOOSE = 1;
 
-
 -(void)chooseCardAtIndex:(NSUInteger)index{
-    Card *card =  [self cardAtIndex:index];
+    Card *card = [self cardAtIndex:index];
     
     if(!card.isMatched){
+        
         if(card.isChosen){
             card.chosen = NO;
-            }
-        else{
+        }else{
+            
             for(Card *otherCard in self.cards){
+                
                 if(otherCard.isChosen && !otherCard.isMatched){
                     int matchScore = [card match:@[otherCard]];
+                    
                     if(matchScore){
                         self.score += matchScore * MATCH_BONUS;
                         otherCard.matched = YES;
                         card.matched = YES;
-                    }
-                    else{
+                    }else {
                         self.score -= MISMATCH_PENALTY;
                         otherCard.chosen = NO;
-                    } break;
+                    }break;
                 }
+                
+                
             }self.score -= COST_TO_CHOOSE;
-            card.chosen = YES;
+            card.chosen =YES;
         }
     }
 }
 
-
 @end
-
-
-
-
-
-
-
-
-
