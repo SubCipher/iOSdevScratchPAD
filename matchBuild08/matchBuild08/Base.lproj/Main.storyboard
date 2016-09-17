@@ -197,6 +197,15 @@
                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOW-1D-j46"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match Score: 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuK-VD-yIV">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="559" width="172" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32167667260667587" green="0.78276909722222221" blue="0.42193292749600786" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -219,6 +228,7 @@
                                 <exclude reference="DMo-me-Dwx"/>
                                 <exclude reference="xJ0-Bb-4rP"/>
                                 <exclude reference="IzJ-LM-KEX"/>
+                                <exclude reference="cuK-VD-yIV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -241,10 +251,12 @@
                                 <include reference="DMo-me-Dwx"/>
                                 <include reference="xJ0-Bb-4rP"/>
                                 <include reference="IzJ-LM-KEX"/>
+                                <include reference="cuK-VD-yIV"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="matchScoreLabel" destination="cuK-VD-yIV" id="XLT-Dr-wKf"/>
                         <outletCollection property="touchCardButtons" destination="zP9-fy-euQ" id="FmV-Wc-WPf"/>
                         <outletCollection property="touchCardButtons" destination="zP9-fy-euQ" id="1fu-Qj-feL"/>
                         <outletCollection property="touchCardButtons" destination="c4Y-pc-BEe" id="bvK-2Q-zH3"/>

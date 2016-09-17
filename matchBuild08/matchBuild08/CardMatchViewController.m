@@ -11,6 +11,7 @@
 #import "PlayingCardDeck.h"
 
 @interface CardMatchViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *matchScoreLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *touchCardButtons;
 @property (strong,nonatomic)CardMatchingGame *game;
 
@@ -45,6 +46,7 @@
         
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
+        self.matchScoreLabel.text = [NSString stringWithFormat:@"Match Score: %ld",(long)self.game.score];
         
         NSLog(@"%@",self.touchCardButtons[cardButtonIndex]);
     }
