@@ -19,32 +19,29 @@
 @implementation PlayingCard
 @synthesize suit = _suit;
 
+int numberToGuess = 0;
 
--(int)match:(NSArray *)otherCards{
-  
-    NSLog(@"----match function in PlayingCard.m----");
-   for(PlayingCard *otherCard in otherCards){
-       
-    if([otherCards count] == 1){
-        if(otherCard.rank == self.rank){
-            self.score++;
-        
-        }
-        else if([otherCard.suit isEqualToString:self.suit]){
-            self.score++;
-            
-        }
-        
-        NSLog(@"     ");
-        NSLog(@"otherCard.contents: %@ == self.contents: %@ = %d",otherCard.contents,self.contents,otherCard.contents==self.contents);
-        NSLog(@"otherCard.rank :%lu == self.rank :%lu = %d",otherCard.rank,self.rank,otherCard.rank ==self.rank);
-        NSLog(@"otherCard.suit: %@ == self.suit: %@ = %d",otherCard.suit,self.suit,otherCard.suit ==self.suit);
-        NSLog(@"     ");
-        NSLog(@"     ");
-        NSLog(@"---------End Match Check-------------");
-    }
-        
-    }return self.score;
+-(int)match:(NSMutableArray *)otherCards{
+   
+    NSLog(@" NEW SET ");
+    NSLog(@"  ");
+    NSLog(@" otherCards count: %lu",[otherCards count]);
+ 
+    PlayingCard *otherCard = [otherCards firstObject];
+    
+    NSLog(@"numberToGuess %d",numberToGuess);
+//    if(numberToGuess >= 2){
+//        [otherCards removeAllObjects];
+//        numberToGuess = 0;
+//        }
+    
+    NSLog(@"firstCard object: %@",otherCard.contents);
+    NSLog(@"self.contents %@",self.contents);
+    NSLog(@"--------------------");
+
+
+    
+    return self.score;
 }
 
 +(NSArray *)rankStrings{
