@@ -183,7 +183,51 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="559" width="186" height="21"/>
+                                    <rect key="frame" x="20" y="499" width="150" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL8-as-aDo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.22177764917882414" green="0.73043632600989561" blue="0.83688446969696972" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="0.98098773004826534" green="0.97011529126213591" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="535" width="77" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSR-jl-1vN"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4B-wb-nbO">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="257" y="549" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchMatchMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="6PS-KS-uUo"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wKW-MI-0Vs">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Match 2 "/>
+                                    <segment title="Match 3"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="480" width="135" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="AUA-OI-Ii4"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khI-Mb-SEg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="212" y="518" width="111" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -207,6 +251,10 @@
                                 <exclude reference="3Fq-30-rak"/>
                                 <exclude reference="YaX-RO-n0y"/>
                                 <exclude reference="z16-YT-RkV"/>
+                                <exclude reference="qL8-as-aDo"/>
+                                <exclude reference="H4B-wb-nbO"/>
+                                <exclude reference="wKW-MI-0Vs"/>
+                                <exclude reference="khI-Mb-SEg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -228,11 +276,16 @@
                                 <include reference="3Fq-30-rak"/>
                                 <include reference="YaX-RO-n0y"/>
                                 <include reference="z16-YT-RkV"/>
+                                <include reference="qL8-as-aDo"/>
+                                <include reference="H4B-wb-nbO"/>
+                                <include reference="wKW-MI-0Vs"/>
+                                <include reference="khI-Mb-SEg"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="matchScoreLabel" destination="z16-YT-RkV" id="XhG-aw-UHG"/>
+                        <outlet property="segmentActionToTake" destination="khI-Mb-SEg" id="4FD-1O-B7Y"/>
                         <outletCollection property="touchCardButtons" destination="2mR-Xl-Ckw" id="rWk-xX-fB5"/>
                         <outletCollection property="touchCardButtons" destination="LLY-ha-jjA" id="iiH-QP-sJj"/>
                         <outletCollection property="touchCardButtons" destination="DSi-ns-Lhv" id="pkF-lf-k30"/>
@@ -253,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279" y="431"/>
+            <point key="canvasLocation" x="252" y="411"/>
         </scene>
     </scenes>
     <resources>
