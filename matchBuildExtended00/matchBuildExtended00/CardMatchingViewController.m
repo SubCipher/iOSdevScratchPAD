@@ -47,15 +47,24 @@
 
 
 - (IBAction)segmentedControlAction:(UISegmentedControl *)sender {
-   [ self.game matchesToMake:sender.selectedSegmentIndex];
-    if(sender.selectedSegmentIndex ==0){
-        self.segmentActionToTake.text = @"Find 2 matches";
-    }
-    if(sender.selectedSegmentIndex == 1){
-        self.segmentActionToTake.text = @"Find 3 matches";
+   //[ self.game matchesToMake:sender.selectedSegmentIndex];
+    self.game.numberOfMatches = sender.selectedSegmentIndex;
+    
+    switch(sender.selectedSegmentIndex){
+        case 0:
+            self.segmentActionToTake.text = @"OFF";
+            break;
+        case 1:
+        self.segmentActionToTake.text = @"2 card match";
+            break;
+        case 2:
+            self.segmentActionToTake.text = @"3 card match";
+            break;
+        default:
+            self.segmentActionToTake.text =@"enter number of matches";
+            break;
     }
 }
-
 
 - (IBAction)switchMatchMode:(UISwitch *)sender {
     
@@ -70,10 +79,13 @@
 
 - (IBAction)resetButton:(UIButton *)sender {
     self.game = nil;
+    self.game.numberOfMatches = [self.touchCardButtons count];
+    NSLog(@"cardButtons reset count %lu",[self.touchCardButtons count]);
     [self updateUI];
 }
 
 -(void)updateUI{
+
    for(UIButton *cardButton in self.touchCardButtons){
       NSInteger cardButtonIndex = [self.touchCardButtons indexOfObject:cardButton];
     
@@ -82,6 +94,7 @@
        
        Card *card = [self.game cardAtIndex:cardButtonIndex];
        
+
        
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
@@ -95,7 +108,7 @@
 
 -(NSString *)titleForCard:(Card *)card{
    
-   // NSLog(@"card.contents: %@",card.contents);
+   NSLog(@"card.contents: %@",card.contents);
        return card.isChosen ? card.contents : @"";
 
 }

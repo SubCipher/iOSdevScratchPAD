@@ -23,6 +23,7 @@
 
 -(int)match:(NSMutableArray *)otherCards{
     int score = 0;
+    
     if([otherCards count]){
        
         PlayingCard *otherCard = [otherCards firstObject];
@@ -34,12 +35,13 @@
                 score = 1;
            
             }
-        NSLog(@" NEW SET ");
-        NSLog(@"  ");
-        NSLog(@"self.rank: %lu == otherCard.rank: %lu = %d",self.rank,otherCard.rank,self.rank == otherCard.rank);
-        NSLog(@"self.contents: %@ == otherCard.contents: %@ = %d",self.suit, otherCard.suit,self.suit == otherCard.suit);
         NSLog(@"--------------------");
+        NSLog(@"    ");
 
+        NSLog(@"Set To Match");
+        NSLog(@"  ");
+        NSLog(@"card: %lu%@ == otherCard: %lu%@ == R: %d | S %d",self.rank,self.suit,otherCard.rank,otherCard.suit,self.rank == otherCard.rank,self.suit == otherCard.suit);
+      
         
     }return score;
 }
