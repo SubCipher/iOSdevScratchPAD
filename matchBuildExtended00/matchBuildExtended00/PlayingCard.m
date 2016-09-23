@@ -22,28 +22,33 @@
 
 
 -(int)match:(NSMutableArray *)otherCards{
-    int score = 0;
-    
+    int score;
     if([otherCards count]){
-       
+        
+        for(int i =0; i < [otherCards count];i++){
+        
         PlayingCard *otherCard = [otherCards firstObject];
         
-            if(self.rank == otherCard.rank){
-                score = 4;
-                
-            } else if(self.suit == otherCard.suit){
-                score = 1;
-           
-            }
+        if(self.rank == otherCard.rank){
+            score += 4;
+            
+        } else if(self.suit == otherCard.suit){
+            score += 1;
+        }
+    
+
+        //[otherCards removeObject:[otherCards firstObject]];
+        
+        
         NSLog(@"--------------------");
         NSLog(@"    ");
-
-        NSLog(@"Set To Match");
+        NSLog(@"Does this set match?");
         NSLog(@"  ");
-        NSLog(@"card: %lu%@ == otherCard: %lu%@ == R: %d | S %d",self.rank,self.suit,otherCard.rank,otherCard.suit,self.rank == otherCard.rank,self.suit == otherCard.suit);
-      
+        NSLog(@"card: %lu%@ == otherCard: %lu%@ == R: %d | S %d",(unsigned long)self.rank,self.suit,(unsigned long)otherCard.rank,otherCard.suit,self.rank == otherCard.rank,self.suit == otherCard.suit);
+        }
         
-    }return score;
+    }
+    return score;
 }
 
 

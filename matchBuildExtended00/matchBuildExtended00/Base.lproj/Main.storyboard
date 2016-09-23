@@ -61,7 +61,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="cardBack"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="119" y="274" width="71" height="124"/>
+                                    <rect key="frame" x="40" y="147" width="71" height="124"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardBiutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rax-hW-mGx"/>
@@ -71,7 +71,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="cardBack"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="119" y="146" width="71" height="124"/>
+                                    <rect key="frame" x="119" y="147" width="71" height="123"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardBiutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exQ-Rg-8s9"/>
@@ -101,20 +101,10 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="cardBack"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="400" width="71" height="123"/>
+                                    <rect key="frame" x="40" y="274" width="71" height="123"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardBiutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xE-uI-xYC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXE-Ve-yEc">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" backgroundImage="cardBack"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="146" width="71" height="124"/>
-                                </variation>
-                                <connections>
-                                    <action selector="touchCardBiutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7X-W6-OYZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0J-kq-1BD">
@@ -141,7 +131,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="cardBack"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="273" width="71" height="124"/>
+                                    <rect key="frame" x="40" y="400" width="71" height="122"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardBiutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYq-Zu-MWb"/>
@@ -186,29 +176,6 @@
                                     <rect key="frame" x="40" y="530" width="150" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose A Match Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khI-Mb-SEg">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="181" y="559" width="167" height="21"/>
-                                </variation>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A8q-Gk-P2D">
-                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                <segments>
-                                    <segment title="off"/>
-                                    <segment title="2CardM"/>
-                                    <segment title="3CardM"/>
-                                </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="173" y="530" width="174" height="29"/>
-                                </variation>
-                                <connections>
-                                    <action selector="segmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="JJ5-pp-zF6"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL8-as-aDo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.22177764917882414" green="0.73043632600989561" blue="0.83688446969696972" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,6 +189,29 @@
                                     <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSR-jl-1vN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXE-Ve-yEc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="cardBack"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="119" y="274" width="71" height="124"/>
+                                </variation>
+                                <connections>
+                                    <action selector="touchCardBiutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7X-W6-OYZ"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A8q-Gk-P2D">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Reg Match"/>
+                                    <segment title="Super Match"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="552" width="185" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="JJ5-pp-zF6"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94252108758123809" blue="0.67791102904849843" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -235,7 +225,6 @@
                                 <exclude reference="6Cq-ck-h6k"/>
                                 <exclude reference="vcw-ny-cE8"/>
                                 <exclude reference="y0b-5f-Nff"/>
-                                <exclude reference="YXE-Ve-yEc"/>
                                 <exclude reference="n0J-kq-1BD"/>
                                 <exclude reference="0Dm-mC-nal"/>
                                 <exclude reference="8G9-6p-FVb"/>
@@ -243,9 +232,9 @@
                                 <exclude reference="3Fq-30-rak"/>
                                 <exclude reference="YaX-RO-n0y"/>
                                 <exclude reference="z16-YT-RkV"/>
-                                <exclude reference="khI-Mb-SEg"/>
-                                <exclude reference="A8q-Gk-P2D"/>
                                 <exclude reference="qL8-as-aDo"/>
+                                <exclude reference="YXE-Ve-yEc"/>
+                                <exclude reference="A8q-Gk-P2D"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -259,7 +248,6 @@
                                 <include reference="6Cq-ck-h6k"/>
                                 <include reference="vcw-ny-cE8"/>
                                 <include reference="y0b-5f-Nff"/>
-                                <include reference="YXE-Ve-yEc"/>
                                 <include reference="n0J-kq-1BD"/>
                                 <include reference="0Dm-mC-nal"/>
                                 <include reference="8G9-6p-FVb"/>
@@ -267,15 +255,14 @@
                                 <include reference="3Fq-30-rak"/>
                                 <include reference="YaX-RO-n0y"/>
                                 <include reference="z16-YT-RkV"/>
-                                <include reference="khI-Mb-SEg"/>
-                                <include reference="A8q-Gk-P2D"/>
                                 <include reference="qL8-as-aDo"/>
+                                <include reference="YXE-Ve-yEc"/>
+                                <include reference="A8q-Gk-P2D"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="matchScoreLabel" destination="z16-YT-RkV" id="XhG-aw-UHG"/>
-                        <outlet property="segmentActionToTake" destination="khI-Mb-SEg" id="4FD-1O-B7Y"/>
                         <outletCollection property="touchCardButtons" destination="2mR-Xl-Ckw" id="rWk-xX-fB5"/>
                         <outletCollection property="touchCardButtons" destination="LLY-ha-jjA" id="iiH-QP-sJj"/>
                         <outletCollection property="touchCardButtons" destination="DSi-ns-Lhv" id="pkF-lf-k30"/>
