@@ -53,9 +53,7 @@
 }
 
 -(Card *)cardAtIndex:(NSUInteger)index{
-    if(self.cards == nil){
-        self.score = 0;
-        }
+
     return (index <[self.cards count]) ? self.cards[index] : nil;
 }
 
@@ -67,11 +65,12 @@ static const int COST_TO_CHOOSE = 1;
    
     
     Card *card = [self cardAtIndex:index];
-        if(!card.isChosen){
-        NSLog(@"******* New Selection*******");
+
+        NSLog(@"******* New Card *******");
         NSLog(@"    ");
         NSLog(@"    ");
         NSLog(@"cardAtIndex %@ | card isChosen ? %d",card.contents,card.isChosen);
+    
     if(!card.isMatched){
         if(card.isChosen){
             card.chosen = NO;
@@ -84,36 +83,40 @@ static const int COST_TO_CHOOSE = 1;
                     NSLog(@"otherCard (%@) is chosen? %d",otherCard.contents,otherCard.isChosen);
                     NSLog(@"cardsToStore in matchOtherCards %lu",(long)self.cardsToStoreForMatch);
                     
-                   
-                    //int matchScore = [card match:@[otherCard]];
-                    if([self.matchOtherCards count] >= self.cardsToStoreForMatch ){
-                        [self.matchOtherCards removeAllObjects];
-                        //card = nil;
-                    }
+
+                    //if([self.matchOtherCards count] >= self.cardsToStoreForMatch ){
+//                        for(Card *xCard in self.matchOtherCards){
+//                            
+//                            NSLog(@"remove xCard: %@ from matchOtherCards array",xCard.contents);
+//                        }
+                    
+                    
+                    //}
 
                     [self.matchOtherCards addObject:otherCard];
                     for(Card *storedCard in self.matchOtherCards){
                         NSLog(@"cards in matchOtherCards array %lu: %@",(unsigned long)[self.matchOtherCards count],storedCard.contents);
                     }
 
-                   
                     int matchScore = [card match:self.matchOtherCards];
 
                     if(matchScore){
+                        
                         self.score += matchScore * MATCH_BONUS;
                         otherCard.matched = YES;
                         card.matched = YES;
-                }else{
-                    self.score -= MISMATCH_PENALTY;
-                    otherCard.chosen =NO;
+                        }
+                    else{
+                        self.score -= MISMATCH_PENALTY;
+                        otherCard.chosen =NO;
                     
-                }
-                break;
-                }
-            }
-            }self.score -= COST_TO_CHOOSE;
+                        }
+                    //break;
+                    }
+            }//end of first if statement, that results in first card marked as chosen & -1
+            self.score -= COST_TO_CHOOSE;
             card.chosen = YES;
-            card = nil;
+            //card = nil;
         }
     }
 }
