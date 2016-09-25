@@ -19,11 +19,6 @@
 @implementation CardMatchingGame
 
 
--(void)matchesToMake:(NSInteger)count{
-   // self.cardsToStoreForMatch = 0;
-    self.cardsToStoreForMatch = count +1;
-    }
-
 
 -(NSMutableArray *)cards{
     if(!_cards) _cards = [[NSMutableArray alloc]init];
@@ -61,63 +56,77 @@ static const int MATCH_BONUS = 4;
 static const int MISMATCH_PENALTY = 2;
 static const int COST_TO_CHOOSE = 1;
 
--(void)chooseCardAtIndex:(NSUInteger)index{
-   
-    
-    Card *card = [self cardAtIndex:index];
 
-        NSLog(@"******* New Card *******");
-        NSLog(@"    ");
-        NSLog(@"    ");
-        NSLog(@"cardAtIndex %@ | card isChosen ? %d",card.contents,card.isChosen);
+-(void)chooseCardAtIndex:(NSUInteger)index{
     
+        Card *card = [self cardAtIndex:index];
+
+
+
+        NSLog(@"******* New CardAtIndex *******");
+        NSLog(@"    ");
+        NSLog(@"cardAtIndex %@ | %@ card isChosen ? %d isMatched? %d",card.contents, card,card.isChosen, card.isMatched);
+
     if(!card.isMatched){
         if(card.isChosen){
             card.chosen = NO;
         }
-        else{
+    else{
             
-            for(Card *otherCard in self.cards){
-            
-                if(otherCard.isChosen && !otherCard.isMatched){
-                    NSLog(@"otherCard (%@) is chosen? %d",otherCard.contents,otherCard.isChosen);
-                    NSLog(@"cardsToStore in matchOtherCards %lu",(long)self.cardsToStoreForMatch);
+        for(Card *otherCard in self.cards){
+            NSLog(@"otherCard.contents: %@ | %@ | isChosen? %d | isMatched? %d",otherCard.contents,otherCard,otherCard.chosen,otherCard.matched);
+                
+            if(otherCard.isChosen && !otherCard.isMatched){
+                NSLog(@"otherCard (%@) | %@ is chosen? %d",otherCard.contents,otherCard,otherCard.isChosen);
+                  
+                  
+                int matchScore = [card match:@[otherCard]];
                     
 
-                    //if([self.matchOtherCards count] >= self.cardsToStoreForMatch ){
-//                        for(Card *xCard in self.matchOtherCards){
-//                            
-//                            NSLog(@"remove xCard: %@ from matchOtherCards array",xCard.contents);
-//                        }
-                    
-                    
-                    //}
-
-                    [self.matchOtherCards addObject:otherCard];
-                    for(Card *storedCard in self.matchOtherCards){
-                        NSLog(@"cards in matchOtherCards array %lu: %@",(unsigned long)[self.matchOtherCards count],storedCard.contents);
-                    }
-
-                    int matchScore = [card match:self.matchOtherCards];
-
-                    if(matchScore){
-                        
+                if(matchScore){
+                        [self.matchOtherCards addObject:otherCard];
                         self.score += matchScore * MATCH_BONUS;
+                        
+                        /* -----------((  single card matching  ))) ---------*/
+                        
+                    if(self.cardsToStoreForMatch == 0){
+                        
+                        NSLog(@"0::cardsToStoreForMatch = %lu",self.cardsToStoreForMatch);
                         otherCard.matched = YES;
                         card.matched = YES;
-                        }
+        
+                            /* -----------((  multiCard matching  ))) ---------*/
+                            
+                    }else if(self.cardsToStoreForMatch == 1){
+                        NSLog(@"1::cardsToStoreForMatch = %lu ",self.cardsToStoreForMatch);
+                        [self.matchOtherCards addObject:card];
+                        NSLog(@"matchOtherCards count %lu",[self.matchOtherCards count]);
+                            
+                            
+                        if([self.matchOtherCards count] > 1){
+                                
+                            for(Card *holdCard in self.matchOtherCards){
+                                    NSLog(@"hold card = %@ |%@ ",holdCard.contents,holdCard);
+                                    holdCard.matched = YES;
+                                    holdCard.chosen = YES;
+                                    
+                                    }
+                                }
+                            }
                     else{
                         self.score -= MISMATCH_PENALTY;
                         otherCard.chosen =NO;
-                    
+                        
                         }
                     //break;
                     }
-            }//end of first if statement, that results in first card marked as chosen & -1
-            self.score -= COST_TO_CHOOSE;
-            card.chosen = YES;
-            //card = nil;
+                }
+            }  self.score -= COST_TO_CHOOSE;
+                card.chosen = YES;
+                NSLog(@"end run cardAtIndex %@,isChosen %@ | %d",card.contents,card,card.isChosen);
+            
         }
     }
 }
+
 @end

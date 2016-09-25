@@ -47,21 +47,20 @@
 
 
 - (IBAction)segmentedControlAction:(UISegmentedControl *)sender {
-   [ self.game matchesToMake:sender.selectedSegmentIndex];
-    //self.game.cardsToStoreForMatch = 0;
+
     
     switch(sender.selectedSegmentIndex){
         case 0:
             self.segmentActionToTake.text = @"Reg Match";
-            self.game.cardsToStoreForMatch = 1;
+            self.game.cardsToStoreForMatch = 0;
             break;
         case 1:
         self.segmentActionToTake.text = @"Super Match";
-            self.game.cardsToStoreForMatch = 2;
+            self.game.cardsToStoreForMatch = 1;
             break;
         default:
             self.segmentActionToTake.text =@"enter number of matches";
-            self.game.cardsToStoreForMatch = 0;
+            self.game.cardsToStoreForMatch = [self.game cardsToStoreForMatch];
             break;
     }
 }
@@ -70,6 +69,7 @@
 - (IBAction)resetButton:(UIButton *)sender {
     self.game = nil;
     NSLog(@"cardButtons reset count %lu",(unsigned long)[self.touchCardButtons count]);
+    
     [self updateUI];
 }
 
@@ -96,8 +96,7 @@
 
 
 -(NSString *)titleForCard:(Card *)card{
-   
-  //NSLog(@"card.contents: %@",card.contents);
+    NSLog(@"( cards on screen-- card.contents: %@ | %@ | isChosen? %d | isMatched? %d",card.contents,card,card.chosen,card.matched);
        return card.isChosen ? card.contents : @"";
 
 }

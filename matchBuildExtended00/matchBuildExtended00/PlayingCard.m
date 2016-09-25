@@ -21,20 +21,17 @@
 
 
 
--(int)match:(NSMutableArray *)otherCards{
+-(int)match:(NSArray *)otherCards{
     int score = 0;
-    if([otherCards count]){
-        
-        for(int i=0; i< [otherCards count];i++){
-            PlayingCard *otherCard = otherCards[i];
-            NSLog(@"the cards: %@|| otherCards count %lu",otherCard.contents,[otherCards count]);
-             NSLog(@"Does this set match?");
-            NSLog(@"self.contents %@ == otherCard.contents %@ = R: %d | S: %d",self.contents,otherCard.contents,self.rank == otherCard.rank,self.suit == otherCard.suit);
-            
-                   NSLog(@"--------------------");
-    
+    for(PlayingCard *otherCard in otherCards){
+        if(self.rank == otherCard.rank){
+            score +=4;
+        }else{
+            if(self.suit == otherCard.suit){
+                score += 1;
+            }
+            NSLog(@"self.rank %@ == otherCard.rank %@, %d",self.contents, otherCard.contents,self.rank == otherCard.rank);
         }
-     
     }
     return score;
 }
