@@ -52,15 +52,15 @@
     switch(sender.selectedSegmentIndex){
         case 0:
             self.segmentActionToTake.text = @"Reg Match";
-            self.game.cardsToStoreForMatch = 0;
+            self.game.singleOrMultipleMatchOption = 0;
             break;
         case 1:
         self.segmentActionToTake.text = @"Super Match";
-            self.game.cardsToStoreForMatch = 1;
+            self.game.singleOrMultipleMatchOption = 1;
             break;
         default:
             self.segmentActionToTake.text =@"enter number of matches";
-            self.game.cardsToStoreForMatch = [self.game cardsToStoreForMatch];
+            self.game.singleOrMultipleMatchOption= [self.game singleOrMultipleMatchOption];
             break;
     }
 }
@@ -96,7 +96,7 @@
 
 
 -(NSString *)titleForCard:(Card *)card{
-    NSLog(@"( cards on screen-- card.contents: %@ | %@ | isChosen? %d | isMatched? %d",card.contents,card,card.chosen,card.matched);
+    //NSLog(@"( cards on screen-- card.contents: %@ | %@ | isChosen? %d | isMatched? %d",card.contents,card,card.chosen,card.matched);
        return card.isChosen ? card.contents : @"";
 
 }

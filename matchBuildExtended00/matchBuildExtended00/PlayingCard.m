@@ -30,7 +30,11 @@
             if(self.suit == otherCard.suit){
                 score += 1;
             }
-            NSLog(@"self.rank %@ == otherCard.rank %@, %d",self.contents, otherCard.contents,self.rank == otherCard.rank);
+            NSLog(@"---------------------------------");
+            NSLog(@"     ");
+            NSLog(@"self.rank %@ == otherCard.rank %@, R: %d S: %d",self.contents, otherCard.contents,self.rank == otherCard.rank,self.suit==otherCard.suit);
+            NSLog(@"    ");
+            NSLog(@"---------------------------------");
         }
     }
     return score;

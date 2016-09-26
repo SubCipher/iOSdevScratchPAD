@@ -20,6 +20,7 @@
 		1819FDD11D8A498800AB9A20 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819FDD01D8A498800AB9A20 /* PlayingCardDeck.m */; };
 		1819FDD41D8A499600AB9A20 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819FDD31D8A499600AB9A20 /* CardMatchingGame.m */; };
 		1819FDE41D8AD9E400AB9A20 /* CardMatchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819FDE31D8AD9E400AB9A20 /* CardMatchingViewController.m */; };
+		18681CE51D983DB1004D9130 /* duplicateMatchMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18681CE31D983DB1004D9130 /* duplicateMatchMain.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		1819FDD31D8A499600AB9A20 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 		1819FDE21D8AD9E400AB9A20 /* CardMatchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingViewController.h; path = matchBuildExtended00/CardMatchingViewController.h; sourceTree = "<group>"; };
 		1819FDE31D8AD9E400AB9A20 /* CardMatchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingViewController.m; path = matchBuildExtended00/CardMatchingViewController.m; sourceTree = "<group>"; };
+		18681CE41D983DB1004D9130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/duplicateMatchMain.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				1819FD961D8A493D00AB9A20 /* AppDelegate.h */,
 				1819FD971D8A493D00AB9A20 /* AppDelegate.m */,
 				1819FD9C1D8A493D00AB9A20 /* Main.storyboard */,
+				18681CE31D983DB1004D9130 /* duplicateMatchMain.storyboard */,
 				1819FD9F1D8A493D00AB9A20 /* Assets.xcassets */,
 				1819FDA11D8A493D00AB9A20 /* LaunchScreen.storyboard */,
 				1819FDA41D8A493D00AB9A20 /* Info.plist */,
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1819FDA31D8A493D00AB9A20 /* LaunchScreen.storyboard in Resources */,
+				18681CE51D983DB1004D9130 /* duplicateMatchMain.storyboard in Resources */,
 				1819FDA01D8A493D00AB9A20 /* Assets.xcassets in Resources */,
 				1819FD9E1D8A493D00AB9A20 /* Main.storyboard in Resources */,
 			);
@@ -362,6 +366,14 @@
 				1819FDA21D8A493D00AB9A20 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18681CE31D983DB1004D9130 /* duplicateMatchMain.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18681CE41D983DB1004D9130 /* Base */,
+			);
+			name = duplicateMatchMain.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

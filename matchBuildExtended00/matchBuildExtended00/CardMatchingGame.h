@@ -18,7 +18,7 @@
 -(void)chooseCardAtIndex:(NSUInteger)index;
 //-(void)matchesToMake:(NSInteger)count;
 
-@property (nonatomic) NSInteger cardsToStoreForMatch;
+@property (nonatomic) NSInteger singleOrMultipleMatchOption;
 @property (nonatomic,readonly) int score;
 
 @end
