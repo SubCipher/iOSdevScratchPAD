@@ -25,6 +25,11 @@
 
 @implementation CardMatchingViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self updateUI];
+}
+
 
 -(CardMatchingGame *)game{
     if(!_game) _game = [[CardMatchingGame alloc]initWithCardCount:[self.touchCardButtons count] usingDeck:[self createDeck]];
@@ -32,8 +37,8 @@
     return _game;
 }
 
--(Deck *)createDeck{
-    return [[PlayingCardDeck alloc]init];
+-(Deck *)createDeck{ //abstract
+    return nil;
     
 }
 
@@ -82,9 +87,6 @@
         in cardMatchingGame.h  */
        
        Card *card = [self.game cardAtIndex:cardButtonIndex];
-       
-
-       
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;

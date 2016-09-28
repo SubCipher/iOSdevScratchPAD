@@ -21,6 +21,7 @@
 		1819FDD41D8A499600AB9A20 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819FDD31D8A499600AB9A20 /* CardMatchingGame.m */; };
 		1819FDE41D8AD9E400AB9A20 /* CardMatchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819FDE31D8AD9E400AB9A20 /* CardMatchingViewController.m */; };
 		18681CE51D983DB1004D9130 /* duplicateMatchMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18681CE31D983DB1004D9130 /* duplicateMatchMain.storyboard */; };
+		18C23FA71D99A95F00A9927D /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C23FA61D99A95F00A9927D /* PlayingCardGameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		1819FDE21D8AD9E400AB9A20 /* CardMatchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingViewController.h; path = matchBuildExtended00/CardMatchingViewController.h; sourceTree = "<group>"; };
 		1819FDE31D8AD9E400AB9A20 /* CardMatchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingViewController.m; path = matchBuildExtended00/CardMatchingViewController.m; sourceTree = "<group>"; };
 		18681CE41D983DB1004D9130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/duplicateMatchMain.storyboard; sourceTree = "<group>"; };
+		18C23FA51D99A95F00A9927D /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardGameViewController.h; path = matchBuildExtended00/PlayingCardGameViewController.h; sourceTree = "<group>"; };
+		18C23FA61D99A95F00A9927D /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardGameViewController.m; path = matchBuildExtended00/PlayingCardGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 			children = (
 				1819FDE21D8AD9E400AB9A20 /* CardMatchingViewController.h */,
 				1819FDE31D8AD9E400AB9A20 /* CardMatchingViewController.m */,
+				18C23FA51D99A95F00A9927D /* PlayingCardGameViewController.h */,
+				18C23FA61D99A95F00A9927D /* PlayingCardGameViewController.m */,
 				1819FDDB1D8A4C1700AB9A20 /* model */,
 				1819FD921D8A493D00AB9A20 /* matchBuildExtended00 */,
 				1819FDAC1D8A493D00AB9A20 /* matchBuildExtended00Tests */,
@@ -317,6 +322,7 @@
 				1819FDD11D8A498800AB9A20 /* PlayingCardDeck.m in Sources */,
 				1819FD951D8A493D00AB9A20 /* main.m in Sources */,
 				1819FDC81D8A495C00AB9A20 /* Card.m in Sources */,
+				18C23FA71D99A95F00A9927D /* PlayingCardGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
