@@ -34,7 +34,7 @@
 -(void)updateUI{
     self.colorFulTextLabel.text =[NSString stringWithFormat:@"%lu colorful characters",[[self charactersWithAttribute:NSForegroundColorAttributeName]length]];
     
-    self.outlinedTextLabel.text = [NSString stringWithFormat:@"%lu outlined characters",[[self charactersWithAttribute:NSStrokeColorAttributeName]length]];
+    self.outlinedTextLabel.text = [NSString stringWithFormat:@"%lu outlined characters",[[self charactersWithAttribute:NSStrokeWidthAttributeName]length]];
 }
 
 -(NSAttributedString *)charactersWithAttribute:(NSString *)attributeName{
@@ -43,9 +43,10 @@
     while(index < [self.textToAnalyze length]){
         NSRange range;
         id value = [self.textToAnalyze attribute:attributeName atIndex:index effectiveRange:&range];
+        
         if(value){
             [characters appendAttributedString:[self.textToAnalyze attributedSubstringFromRange:range]];
-             index =range.location + range.length;
+             index =range.location+range.length;
              }else{
                  index++;
              }

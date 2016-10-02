@@ -23,12 +23,14 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"analyzeText"]){
+        
         if([segue.destinationViewController isKindOfClass:[TextStatsViewController01 class]]){
-            TextStatsViewController01 *tsvc = segue.destinationViewController;
+            TextStatsViewController01 *tsvc = (TextStatsViewController01 *)segue.destinationViewController;
             tsvc.textToAnalyze = self.textBody.textStorage;
         }
     }
 }
+
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -47,7 +49,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self usePreferredFonts];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(preferredFontsChanged:)
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(preferredFontsChanged:)
                                                 name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
 
@@ -61,7 +64,9 @@
 }
 
 - (IBAction)changeBodySelectionButton:(UIButton *)sender {
-    [self.textBody.textStorage addAttribute:NSForegroundColorAttributeName value:sender.backgroundColor range:self.textBody.selectedRange];
+    [self.textBody.textStorage addAttribute:NSForegroundColorAttributeName
+                                      value:sender.backgroundColor
+                                      range:self.textBody.selectedRange];
 }
 
 
