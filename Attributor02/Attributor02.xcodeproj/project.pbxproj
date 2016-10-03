@@ -15,6 +15,7 @@
 		18DDDF781DA03B7D0008B2EA /* Attributor02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDF771DA03B7D0008B2EA /* Attributor02Tests.m */; };
 		18DDDF831DA03B7D0008B2EA /* Attributor02UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDF821DA03B7D0008B2EA /* Attributor02UITests.m */; };
 		18DDDF921DA03BB50008B2EA /* AttributorViewController02.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDF911DA03BB50008B2EA /* AttributorViewController02.m */; };
+		18DDDF981DA0C0FD0008B2EA /* TextStatsViewController02.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDF971DA0C0FD0008B2EA /* TextStatsViewController02.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		18DDDF841DA03B7D0008B2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DDDF901DA03BB50008B2EA /* AttributorViewController02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributorViewController02.h; sourceTree = "<group>"; };
 		18DDDF911DA03BB50008B2EA /* AttributorViewController02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributorViewController02.m; sourceTree = "<group>"; };
+		18DDDF961DA0C0FD0008B2EA /* TextStatsViewController02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextStatsViewController02.h; path = ../TextStatsViewController02.h; sourceTree = "<group>"; };
+		18DDDF971DA0C0FD0008B2EA /* TextStatsViewController02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextStatsViewController02.m; path = ../TextStatsViewController02.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		18DDDF5C1DA03B7D0008B2EA /* Attributor02 */ = {
 			isa = PBXGroup;
 			children = (
+				18DDDF961DA0C0FD0008B2EA /* TextStatsViewController02.h */,
+				18DDDF971DA0C0FD0008B2EA /* TextStatsViewController02.m */,
 				18DDDF901DA03BB50008B2EA /* AttributorViewController02.h */,
 				18DDDF911DA03BB50008B2EA /* AttributorViewController02.m */,
 				18DDDF601DA03B7D0008B2EA /* AppDelegate.h */,
@@ -274,6 +279,7 @@
 				18DDDF921DA03BB50008B2EA /* AttributorViewController02.m in Sources */,
 				18DDDF621DA03B7D0008B2EA /* AppDelegate.m in Sources */,
 				18DDDF5F1DA03B7D0008B2EA /* main.m in Sources */,
+				18DDDF981DA0C0FD0008B2EA /* TextStatsViewController02.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

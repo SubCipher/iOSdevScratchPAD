@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V7q-wT-g0g">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RjO-SX-Uda">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="37" width="360" height="282"/>
-                                </variation>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiK-HT-E4W">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Outline"/>
@@ -70,6 +60,18 @@
                                     <action selector="outlineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qKO-no-8aQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s82-E6-Yv9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.98441466960999457" blue="0.10859401070995367" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Yellow"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="243" y="428" width="70" height="56"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeTextBodyColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JS-I1-JYa"/>
+                                    <action selector="outlineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fM1-CM-yUT"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D07-Ld-5Z4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="UnOutline"/>
@@ -86,45 +88,50 @@
                                     <rect key="frame" x="243" y="522" width="65" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s82-E6-Yv9">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.98441466960999457" blue="0.10859401070995367" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Yellow"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RjO-SX-Uda">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="243" y="428" width="70" height="56"/>
+                                    <rect key="frame" x="20" y="35" width="360" height="282"/>
                                 </variation>
-                                <connections>
-                                    <action selector="changeTextBodyColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JS-I1-JYa"/>
-                                    <action selector="outlineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fM1-CM-yUT"/>
-                                </connections>
-                            </button>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="RjO-SX-Uda"/>
                                 <exclude reference="PiK-HT-E4W"/>
                                 <exclude reference="7b0-6W-TPc"/>
                                 <exclude reference="K6p-8U-RXq"/>
                                 <exclude reference="zaa-pS-rQ8"/>
+                                <exclude reference="s82-E6-Yv9"/>
                                 <exclude reference="D07-Ld-5Z4"/>
                                 <exclude reference="wNu-Pm-CpC"/>
-                                <exclude reference="s82-E6-Yv9"/>
+                                <exclude reference="RjO-SX-Uda"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="RjO-SX-Uda"/>
                                 <include reference="PiK-HT-E4W"/>
                                 <include reference="7b0-6W-TPc"/>
                                 <include reference="K6p-8U-RXq"/>
                                 <include reference="zaa-pS-rQ8"/>
+                                <include reference="s82-E6-Yv9"/>
                                 <include reference="D07-Ld-5Z4"/>
                                 <include reference="wNu-Pm-CpC"/>
-                                <include reference="s82-E6-Yv9"/>
+                                <include reference="RjO-SX-Uda"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="f3p-2c-kZN">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="wxQ-D5-W8E">
+                            <connections>
+                                <segue destination="QHm-P1-Gwq" kind="show" identifier="textToAnalyzeSegue" id="xOb-9R-qkR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="headlineLabel" destination="wNu-Pm-CpC" id="Jbn-cN-Zy3"/>
                         <outlet property="outlineButton" destination="PiK-HT-E4W" id="fV5-fI-JDh"/>
@@ -132,6 +139,77 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1363.5" y="431"/>
+        </scene>
+        <!--Text Stats View Controller02-->
+        <scene sceneID="EoQ-kd-CM1">
+            <objects>
+                <viewController id="QHm-P1-Gwq" customClass="TextStatsViewController02" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RlM-2j-AUD"/>
+                        <viewControllerLayoutGuide type="bottom" id="swk-WL-dkK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x9j-sb-LEB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00: Colorful Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-Cg-UDu">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="181" width="142" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00: Outline Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ap-qE-hvM">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="61" width="135" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="c1m-Cg-UDu"/>
+                                <exclude reference="2Ap-qE-hvM"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="c1m-Cg-UDu"/>
+                                <include reference="2Ap-qE-hvM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="colorfulLabelCount" destination="c1m-Cg-UDu" id="zwS-SQ-qsZ"/>
+                        <outlet property="outlineLabelCount" destination="2Ap-qE-hvM" id="tWg-3O-rgr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbh-RO-OTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2103" y="425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n4E-tB-fi4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7q-wT-g0g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNb-Kf-QPg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lK0-JC-yQi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdD-lo-6Wy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="445.5" y="431"/>
         </scene>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wgc-yR-PaJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Attributor View Controller03-->
+        <scene sceneID="Lfd-rC-H8d">
+            <objects>
+                <viewController id="wgc-yR-PaJ" customClass="AttributorViewController03" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xKy-rh-gpQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Szk-fa-WzB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hFu-A0-ht6">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pra-tS-ShB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="100" width="360" height="128"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdM-jb-4Zi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.13540751354628955" green="0.4664611812543038" blue="0.90490845959595956" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Blue">
+                                    <color key="titleColor" red="0.86236532463932769" green="0.90490845959595956" blue="0.7486242530648678" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="54" y="402" width="31" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeBodyTextColorFromSelection:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="VT4-ps-FhW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68f-IK-N0c">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="229" y="512" width="109" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqm-BD-YH2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.26785989166177465" green="0.90490845959595956" blue="0.11555610160282052" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Green"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="121" y="402" width="42" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeBodyTextColorFromSelection:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="jtu-Sh-tj7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tN-QY-bcF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.90490845959595956" green="0.12318403693904995" blue="0.12206979906078011" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Red"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="229" y="402" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeBodyTextColorFromSelection:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="LOT-Aa-VtY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epF-S9-g57">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.90490845959595956" green="0.88910721785186686" blue="0.062539810298098145" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Yellow"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="296" y="402" width="44" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeBodyTextColorFromSelection:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="IVz-f7-f9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imd-km-WH9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Outline"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="45" y="470" width="49" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="outlineButton:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="VNm-B0-AZV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySm-qN-ZMF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="UnOutline"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="108" y="470" width="92" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="unOutline:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="lBb-Cb-6D1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pra-tS-ShB"/>
+                                <exclude reference="MdM-jb-4Zi"/>
+                                <exclude reference="68f-IK-N0c"/>
+                                <exclude reference="aqm-BD-YH2"/>
+                                <exclude reference="3tN-QY-bcF"/>
+                                <exclude reference="epF-S9-g57"/>
+                                <exclude reference="imd-km-WH9"/>
+                                <exclude reference="ySm-qN-ZMF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pra-tS-ShB"/>
+                                <include reference="MdM-jb-4Zi"/>
+                                <include reference="68f-IK-N0c"/>
+                                <include reference="aqm-BD-YH2"/>
+                                <include reference="3tN-QY-bcF"/>
+                                <include reference="epF-S9-g57"/>
+                                <include reference="imd-km-WH9"/>
+                                <include reference="ySm-qN-ZMF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="headline" destination="68f-IK-N0c" id="ayY-7L-Jd6"/>
+                        <outlet property="outlineButton" destination="imd-km-WH9" id="izr-8K-P4Y"/>
+                        <outlet property="textBody" destination="pra-tS-ShB" id="1fx-TW-LSf"/>
+                        <outlet property="unOutlineButton" destination="ySm-qN-ZMF" id="xN6-eL-oA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heo-2H-SIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="444"/>
+        </scene>
+    </scenes>
+</document>

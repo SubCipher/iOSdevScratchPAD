@@ -7,7 +7,7 @@
 //
 
 #import "AttributorViewController02.h"
-
+#import "TextStatsViewController02.h"
 @interface AttributorViewController02 ()
 
 @property (weak, nonatomic) IBOutlet UITextView *textBody;
@@ -22,6 +22,20 @@
 
 
 @implementation AttributorViewController02
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"textToAnalyzeSegue"]){
+        
+        if([segue.destinationViewController isKindOfClass:[TextStatsViewController02 class]]){
+            TextStatsViewController02 *tsvc = (TextStatsViewController02 *) segue.destinationViewController;
+            tsvc.textToAnalyze = self.textBody.textStorage;
+        }
+            
+        }
+}
+
 
 -(void)viewDidLoad{
     [super viewDidLoad];
