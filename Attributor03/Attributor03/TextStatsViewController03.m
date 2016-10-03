@@ -10,28 +10,52 @@
 
 @interface TextStatsViewController03 ()
 
+@property(weak,nonatomic)IBOutlet UILabel *colorFulCharacters;
+@property(weak,nonatomic)IBOutlet UILabel *outlineCharacters;
+
+
 @end
 
 @implementation TextStatsViewController03
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self updateUI];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)updateUI{
+    self.colorFulCharacters.text = [NSString stringWithFormat:@"%lu colorful characters",[[self charactersWithAttribute:NSForegroundColorAttributeName]length]];
+    
+    self.outlineCharacters.text = [NSString stringWithFormat:@"%lu outline characters",[[self charactersWithAttribute:NSStrokeColorAttributeName]length]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)setTextToAnalyze:(NSAttributedString *)textToAnalyze{
+    _textToAnalyze = textToAnalyze;
+    if(self.view.window){
+        [self updateUI];
+    }
+    
 }
-*/
+
+
+-(NSAttributedString *)charactersWithAttribute:(NSString *)attributeName{
+    NSMutableAttributedString *characters = [[NSMutableAttributedString alloc]init];
+    
+    long index = 0;
+    while(index < [self.textToAnalyze length]){
+        NSRange range;
+        id value = [self.textToAnalyze attribute:attributeName atIndex:index effectiveRange:&range];
+        if(value){
+            [characters appendAttributedString:[self.textToAnalyze attributedSubstringFromRange:range]];
+            index = range.location + range.length;
+        }
+        else{
+            index++;
+    }
+    }return characters;
+}
 
 @end

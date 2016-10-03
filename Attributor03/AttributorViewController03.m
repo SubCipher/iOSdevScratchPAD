@@ -7,7 +7,7 @@
 //
 
 #import "AttributorViewController03.h"
-
+#import "TextStatsViewController03.h"
 @interface AttributorViewController03 ()
 
 @property(weak,nonatomic)IBOutlet UITextView *textBody;
@@ -37,6 +37,21 @@
     
     
 }
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"textToAnalyzeSegue"]){
+        
+        if([segue.destinationViewController isKindOfClass:[TextStatsViewController03 class]]){
+            TextStatsViewController03 *tsvc = (TextStatsViewController03 *)segue.destinationViewController;
+            tsvc.textToAnalyze = self.textBody.textStorage;
+            
+            
+        }
+    }
+}
+
 
 
 -(void)setupOutlineButton{

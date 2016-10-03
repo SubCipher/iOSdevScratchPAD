@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wgc-yR-PaJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tDA-Ub-B5I">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Attributor View Controller03-->
+        <!--CS193ROCKS!!-->
         <scene sceneID="Lfd-rC-H8d">
             <objects>
                 <viewController id="wgc-yR-PaJ" customClass="AttributorViewController03" sceneMemberID="viewController">
@@ -128,6 +128,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="CS193ROCKS!!" id="oN8-ha-Meb">
+                        <barButtonItem key="rightBarButtonItem" title="Stats" id="Nvg-8m-oVw">
+                            <connections>
+                                <segue destination="cr8-oT-Mwg" kind="show" identifier="textToAnalyzeSegue" id="tmr-pA-bsq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="headline" destination="68f-IK-N0c" id="ayY-7L-Jd6"/>
                         <outlet property="outlineButton" destination="imd-km-WH9" id="izr-8K-P4Y"/>
@@ -137,7 +144,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heo-2H-SIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="444"/>
+            <point key="canvasLocation" x="1062" y="428"/>
+        </scene>
+        <!--Text Stats View Controller03-->
+        <scene sceneID="LHE-kG-b7p">
+            <objects>
+                <viewController id="cr8-oT-Mwg" customClass="TextStatsViewController03" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mdt-Yx-yhf"/>
+                        <viewControllerLayoutGuide type="bottom" id="nLf-Wp-ToA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="67i-it-Uml">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ColorFul Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-2Y-6w4">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="116" y="71" width="168" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Outline Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIz-Lf-tgd">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="121" y="133" width="158" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hrq-2Y-6w4"/>
+                                <exclude reference="MIz-Lf-tgd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hrq-2Y-6w4"/>
+                                <include reference="MIz-Lf-tgd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="colorFulCharacters" destination="hrq-2Y-6w4" id="oib-q2-UZr"/>
+                        <outlet property="outlineCharacters" destination="MIz-Lf-tgd" id="dIR-4f-cgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9V-qp-pfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CLh-MZ-Iyy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tDA-Ub-B5I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Ow-4n-yTx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wgc-yR-PaJ" kind="relationship" relationship="rootViewController" id="jQ5-tY-EtZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfk-Ip-IJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="428"/>
         </scene>
     </scenes>
 </document>
