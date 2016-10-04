@@ -96,6 +96,10 @@
     
 }
 
+-(IBAction)removeTextBodyColor:(UIButton *)sender{
+    [self.textBody.textStorage removeAttribute:NSForegroundColorAttributeName range:self.textBody.selectedRange];
+    
+}
 
 
 

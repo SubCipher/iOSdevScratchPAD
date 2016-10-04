@@ -101,6 +101,16 @@
                                     <action selector="unOutline:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="lBb-Cb-6D1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok1-bt-LId">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="remove Color"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="54" y="529" width="109" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="removeTextBodyColor:" destination="wgc-yR-PaJ" eventType="touchUpInside" id="xAB-a6-fVt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -113,6 +123,7 @@
                                 <exclude reference="epF-S9-g57"/>
                                 <exclude reference="imd-km-WH9"/>
                                 <exclude reference="ySm-qN-ZMF"/>
+                                <exclude reference="ok1-bt-LId"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -125,6 +136,7 @@
                                 <include reference="epF-S9-g57"/>
                                 <include reference="imd-km-WH9"/>
                                 <include reference="ySm-qN-ZMF"/>
+                                <include reference="ok1-bt-LId"/>
                             </mask>
                         </variation>
                     </view>
