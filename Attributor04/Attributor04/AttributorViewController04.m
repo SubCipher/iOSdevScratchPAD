@@ -7,7 +7,7 @@
 //
 
 #import "AttributorViewController04.h"
-
+#import "TextStatsViewController04.h"
 @interface AttributorViewController04 ()
 
 @property(weak,nonatomic)IBOutlet UITextView *textBody;
@@ -20,14 +20,25 @@
 @implementation AttributorViewController04
 
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ if([segue.identifier isEqualToString:@"textToAnalyzeSegue"]){
+    if([segue.destinationViewController isKindOfClass:[TextStatsViewController04 class]]){
+        TextStatsViewController04 *tsvc = (TextStatsViewController04 *)segue.destinationViewController;
+        tsvc.textToAnalyze = self.textBody.textStorage;
+        
+    }
+}
+    
+}
+
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self setupOutlineButton];
 }
 
 
--(void)preferredFontsDidChange:(NSNotification *)notification{
-    
+-(void)preferredFontsChanged:(NSNotification *)notification{
+    [self usePreferredFonts];
 }
 
 -(void)usePreferredFonts{
@@ -39,9 +50,19 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self usePreferredFonts];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(preferredFontsChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
 
 -(void)setupOutlineButton{
+    NSMutableAttributedString *title = [[NSMutableAttributedString alloc]init];
+    
+    [title setAttributes:@{ NSStrokeWidthAttributeName:@-3,
+                            NSStrokeColorAttributeName:self.outlineButton.tintColor
+                            }
+     
+                   range:NSMakeRange(0, [title length])];
+    [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
     
 }
 
@@ -61,7 +82,7 @@
 
 
 -(IBAction)UnOutlineButton:(UIButton *)sender{
-    [self.textBody.textStorage removeAttribute:NSStrokeColorAttributeName range:self.textBody.selectedRange];
+    [self.textBody.textStorage removeAttribute:NSStrokeWidthAttributeName range:self.textBody.selectedRange];
 }
 
 

@@ -15,6 +15,7 @@
 		18DDE0081DA35AA80008B2EA /* Attributor04Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDE0071DA35AA80008B2EA /* Attributor04Tests.m */; };
 		18DDE0131DA35AA80008B2EA /* Attributor04UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDE0121DA35AA80008B2EA /* Attributor04UITests.m */; };
 		18DDE0221DA35B030008B2EA /* AttributorViewController04.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDE0211DA35B030008B2EA /* AttributorViewController04.m */; };
+		18DDE0251DA366650008B2EA /* TextStatsViewController04.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDE0241DA366650008B2EA /* TextStatsViewController04.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		18DDE0141DA35AA80008B2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DDE0201DA35B030008B2EA /* AttributorViewController04.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributorViewController04.h; sourceTree = "<group>"; };
 		18DDE0211DA35B030008B2EA /* AttributorViewController04.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributorViewController04.m; sourceTree = "<group>"; };
+		18DDE0231DA366650008B2EA /* TextStatsViewController04.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStatsViewController04.h; sourceTree = "<group>"; };
+		18DDE0241DA366650008B2EA /* TextStatsViewController04.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStatsViewController04.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				18DDDFF01DA35AA80008B2EA /* AppDelegate.h */,
 				18DDDFF11DA35AA80008B2EA /* AppDelegate.m */,
 				18DDDFF61DA35AA80008B2EA /* Main.storyboard */,
+				18DDE0231DA366650008B2EA /* TextStatsViewController04.h */,
+				18DDE0241DA366650008B2EA /* TextStatsViewController04.m */,
 				18DDDFF91DA35AA80008B2EA /* Assets.xcassets */,
 				18DDDFFB1DA35AA80008B2EA /* LaunchScreen.storyboard */,
 				18DDDFFE1DA35AA80008B2EA /* Info.plist */,
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DDDFF21DA35AA80008B2EA /* AppDelegate.m in Sources */,
+				18DDE0251DA366650008B2EA /* TextStatsViewController04.m in Sources */,
 				18DDE0221DA35B030008B2EA /* AttributorViewController04.m in Sources */,
 				18DDDFEF1DA35AA80008B2EA /* main.m in Sources */,
 			);
